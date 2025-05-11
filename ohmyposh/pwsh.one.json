@@ -1,0 +1,75 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "maps": {
+    "user_name": {
+      "salma": "salman"
+    }
+  },
+  "upgrade": {
+    "source": "cdn",
+    "interval": "168h",
+    "auto": false,
+    "notice": false
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "leading_diamond": "\ue0b6",
+          "template": " {{ .UserName }}@{{ .HostName }} ",
+          "foreground": "#ffffff",
+          "background": "#07585c",
+          "type": "session",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "style": "folder"
+          },
+          "template": " \ue5ff {{ .Path }} ",
+          "foreground": "#ffffff",
+          "background": "#184707",
+          "type": "path",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "branch_icon": "",
+            "fetch_upstream_icon": true
+          },
+          "template": " {{ .UpstreamIcon }} {{ .HEAD }} ",
+          "foreground": "#ffffff",
+          "background": "#de076f",
+          "type": "git",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "always_enabled": true
+          },
+          "trailing_diamond": "\ue0b4",
+          "template": " \ueb05 ",
+          "foreground": "#ffffff",
+          "background": "#491515",
+          "type": "status",
+          "style": "diamond",
+          "background_templates": [
+            "{{ if gt .Code 0 }}#f1184c{{ end }}"
+          ]
+        },
+        {
+          "type": "node",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "#ffffff",
+          "background": "#6CA35E",
+          "template": "  {{ .Full }} "
+        }
+      ]
+    }
+  ],
+  "version": 3,
+  "final_space": true
+}
