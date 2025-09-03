@@ -60,6 +60,19 @@
           ]
         },
         {
+          "type": "python",
+          "style": "powerline",
+          "powerline_symbol": "",
+          "foreground": "#ffffff",
+          "background": "#4caf50",
+          "template": " {{ if .Venv }} 🐍 {{ .Venv }} {{ end }}",
+          "properties": {
+            "display_mode": "files",
+            "prefix": "",
+            "postfix": ""
+          }
+        },
+        {
           "type": "node",
           "style": "powerline",
           "powerline_symbol": "",
